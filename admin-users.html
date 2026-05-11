@@ -31,10 +31,10 @@
 <div class="app">
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-logo"><a href="index.html" class="logo">Joint<span>U</span></a></div>
-    <div style="padding:10px 12px;border-bottom:1px solid var(--border-dark)">
-      <span class="badge badge-ink" style="width:100%;justify-content:center;padding:6px 0;border-radius:6px;font-size:.65rem">SYSTEM CONSOLE</span>
+    <div class="sidebar-item">
+      <span class="badge badge-ink" class="d-flex btn-center">SYSTEM CONSOLE</span>
     </div>
-    <nav class="sidebar-nav" style="padding:8px 0">
+    <nav class="sidebar-nav" class="p-8-0">
       <a href="admin-dashboard.html" class="sidebar-link"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Stats Overview</a>
       <a href="admin-users.html" class="sidebar-link active"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Manage Users</a>
       <a href="admin-jobs.html" class="sidebar-link"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Jobs &amp; Proposals</a>
@@ -49,8 +49,8 @@
     <div class="app-content">
       <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px">
         <div>
-          <h2 style="font-size:1.6rem">User Management</h2>
-          <p class="muted" style="font-size:.88rem">Verify credentials and manage platform access.</p>
+          <h2 class="text-2xl-700">User Management</h2>
+          <p class="muted" class="text-base">Verify credentials and manage platform access.</p>
         </div>
         <div class="table-search">
           <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
@@ -58,7 +58,7 @@
         </div>
       </div>
 
-      <div class="card" style="padding:0;overflow:hidden">
+      <div class="card" class="p-0-overflow-hidden">
         <table class="user-table">
           <thead>
             <tr>
@@ -76,7 +76,7 @@
               <td><span class="badge badge-gray">Worker</span></td>
               <td><span class="verify-badge verify-yes">✓ VERIFIED</span></td>
               <td><span class="status-active">● ACTIVE</span></td>
-              <td style="color:var(--muted);font-size:.82rem">May 12, 2024</td>
+              <td class="text-sm-muted-3">May 12, 2024</td>
               <td><button class="action-dots">···</button></td>
             </tr>
             <tr>
@@ -84,7 +84,7 @@
               <td><span class="badge badge-blue">Client</span></td>
               <td><span class="verify-badge verify-no">⏳ PENDING</span></td>
               <td><span class="status-active">● ACTIVE</span></td>
-              <td style="color:var(--muted);font-size:.82rem">May 15, 2024</td>
+              <td class="text-sm-muted-3">May 15, 2024</td>
               <td><button class="action-dots">···</button></td>
             </tr>
             <tr>
@@ -92,7 +92,7 @@
               <td><span class="badge badge-gray">Worker</span></td>
               <td><span class="verify-badge verify-yes">✓ VERIFIED</span></td>
               <td><span class="status-suspended">✕ SUSPENDED</span></td>
-              <td style="color:var(--muted);font-size:.82rem">Apr 20, 2024</td>
+              <td class="text-sm-muted-3">Apr 20, 2024</td>
               <td><button class="action-dots">···</button></td>
             </tr>
             <tr>
@@ -100,7 +100,7 @@
               <td><span class="badge badge-blue">Client</span></td>
               <td><span class="verify-badge verify-yes">✓ VERIFIED</span></td>
               <td><span class="status-active">● ACTIVE</span></td>
-              <td style="color:var(--muted);font-size:.82rem">Jun 2, 2024</td>
+              <td class="text-sm-muted-3">Jun 2, 2024</td>
               <td><button class="action-dots">···</button></td>
             </tr>
             <tr>
@@ -108,7 +108,7 @@
               <td><span class="badge badge-gray">Worker</span></td>
               <td><span class="verify-badge verify-no">⏳ PENDING</span></td>
               <td><span class="status-active">● ACTIVE</span></td>
-              <td style="color:var(--muted);font-size:.82rem">May 10, 2026</td>
+              <td class="text-sm-muted-3">May 10, 2026</td>
               <td><button class="action-dots">···</button></td>
             </tr>
           </tbody>
@@ -119,3 +119,9 @@
 </div>
 </body>
 </html>
+
+
+
+
+
+
