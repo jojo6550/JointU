@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Overview — JointU Worker</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="app">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo"><a href="index.html" class="logo">Joint<span>U</span></a></div>
+    <div class="connects-bar">
+      <div class="connects-label">Connects <span>18 / 20</span></div>
+      <div class="connects-track"><div class="connects-fill"></div></div>
+      <a class="connects-more" href="#">+ Get More Bids</a>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="workerdashboard.html" class="active"><span>◻</span> Overview</a>
+      <a href="workerfind_jobs.html"><span>⌕</span> Find Jobs</a>
+      <a href="worker-bids.html"><span>📄</span> My Bids</a>
+      <a href="worker_working.html"><span>🏗</span> Working On</a>
+      <a href="worker-history.html"><span>📋</span> History</a>
+      <a href="worker-portfolio.html"><span>🖼</span> Portfolio</a>
+      <a href="worker-messages.html"><span>💬</span> Messages</a>
+      <a href="worker-payments.html"><span>💰</span> Payments</a>
+      <a href="worker-disputes.html"><span>⚠</span> Disputes</a>
+      <a href="worker-settings.html"><span>⚙</span> Settings</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="app-main">
+    <div class="app-header">
+      <div class="app-header-title">
+        <h2>Mawnin', Keno! 👋</h2>
+        <p>Ready to find your next project in St. Andrew?</p>
+      </div>
+      <div class="app-header-actions">
+        <a href="workerfind_jobs.html" class="btn btn-primary btn-sm">Browse New Jobs</a>
+      </div>
+    </div>
+    <div class="app-content-wide">
+      <!-- STATS -->
+      <div class="stats-grid" style="margin-bottom:24px">
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-ink">⚡</div>
+          <div class="stat-val">18</div>
+          <div class="stat-label">Connects Left</div>
+          <div class="stat-delta stable">of 20</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-mint">📈</div>
+          <div class="stat-val">98%</div>
+          <div class="stat-label">Success Rate</div>
+          <div class="stat-delta up">↑ High Match</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-ink">💰</div>
+          <div class="stat-val">$124k</div>
+          <div class="stat-label">Total Earned</div>
+          <div class="stat-delta up">↑ JMD Total</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-mint">⭐</div>
+          <div class="stat-val">4.9</div>
+          <div class="stat-label">Reviews</div>
+          <div class="stat-delta stable">124 ratings</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 320px;gap:20px">
+        <!-- Active jobs -->
+        <div class="card">
+          <div class="card-header">
+            <div><div class="card-title">Active Working Jobs</div></div>
+            <a href="worker_working.html" class="btn btn-ghost btn-sm">View All</a>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:14px;background:var(--off-white);border-radius:var(--r)">
+              <div style="display:flex;align-items:center;gap:12px">
+                <div style="width:36px;height:36px;border-radius:8px;background:var(--ink);display:flex;align-items:center;justify-content:center;color:var(--mint);font-size:.85rem">🏗</div>
+                <div><div style="font-weight:600;font-size:.9rem">Office Full Rewiring</div><div style="font-size:.75rem;color:var(--muted)">Client: Jason R.</div></div>
+              </div>
+              <div style="text-align:right"><div style="font-size:.78rem;font-weight:700;color:var(--mint)">80% Complete</div><div style="font-size:.7rem;color:var(--muted)">⏱ In 3 days</div></div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:14px;background:var(--off-white);border-radius:var(--r)">
+              <div style="display:flex;align-items:center;gap:12px">
+                <div style="width:36px;height:36px;border-radius:8px;background:var(--ink);display:flex;align-items:center;justify-content:center;color:var(--mint);font-size:.85rem">🔧</div>
+                <div><div style="font-weight:600;font-size:.9rem">Fix Leaking Garden Pipe</div><div style="font-size:.75rem;color:var(--muted)">Client: Alicia S.</div></div>
+              </div>
+              <div style="text-align:right"><div style="font-size:.78rem;font-weight:700;color:var(--muted)">Just Started</div><div style="font-size:.7rem;color:var(--muted)">⏱ Tomorrow</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent activity -->
+        <div class="card">
+          <div class="card-header"><div class="card-title">Recent Activity</div></div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div class="alert alert-error" style="font-size:.8rem">Your bid on "AC Clean" was rejected.</div>
+            <div class="alert alert-success" style="font-size:.8rem">Client marked "Garden Pipe" as PAID.</div>
+            <div class="alert alert-info" style="font-size:.8rem">New message from Alicia S.</div>
+          </div>
+          <div class="card" style="margin-top:16px;background:var(--off-white);border:1px solid var(--border)">
+            <div style="font-size:.78rem;color:var(--muted);margin-bottom:4px;font-weight:600">Trust Score</div>
+            <p style="font-size:.78rem;color:var(--muted);margin-bottom:10px">Complete your verification to appear higher in client searches.</p>
+            <a href="worker-settings.html" class="btn btn-primary btn-sm btn-full">Verify ID Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- New job alert banner -->
+      <div style="background:var(--ink);border-radius:var(--r-lg);padding:18px 24px;display:flex;align-items:center;justify-content:space-between;margin-top:20px;gap:16px;flex-wrap:wrap">
+        <div>
+          <div style="font-weight:700;color:var(--white)">🚨 New Job Alert!</div>
+          <div style="font-size:.85rem;color:rgba(255,255,255,.6)">Plumbing repair needed at St. Andrew Park — JMD 15k</div>
+        </div>
+        <a href="workerfind_jobs.html" class="btn btn-mint btn-sm">View Job</a>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
