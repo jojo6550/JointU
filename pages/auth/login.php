@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Log In — JointU</title>
+<link rel="stylesheet" href="../../css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-off-white">
+
+<div class="auth-page">
+  <div class="auth-card">
+    <a href="../../index.php" class="logo auth-logo d-block text-center mb-24">Joint<span>U</span></a>
+    <h1 class="auth-title">Welcome back to JointU</h1>
+    <p class="auth-sub">Enter your details below to access your dashboard.</p>
+
+    <div class="form-group">
+      <label class="form-label">Email Address</label>
+      <div class="input-icon">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+        <input type="email" placeholder="name@example.com">
+      </div>
+      <p class="text-light" style="font-size:.72rem;margin-top:5px">Try 'worker@demo.com' or 'admin@demo.com' for now testing.</p>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Password</label>
+      <div class="input-icon">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <input type="password" placeholder="••••••••">
+      </div>
+      <a href="../auth/resetpassword.php" class="d-block text-right text-mint-dim" style="font-size:.8rem;margin-top:6px">Forgot your password?</a>
+    </div>
+
+    <a href="../worker/worker-overview.php" class="btn btn-primary btn-full btn-lg mb-14">Log In</a>
+    <div class="modal-footer">Don't have an account? <a href="../auth/signup.php" class="modal-link">Sign up for free</a></div>
+  </div>
+</div>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>
+
+
+
+
+

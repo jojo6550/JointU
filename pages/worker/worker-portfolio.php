@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JointU – Portfolio</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="sidebar-logo"><a href="../../index.php" class="logo">Joint<span>U</span></a></div>
+  <div class="connects-bar">
+    <div class="connects-label">Connects <span>18 / 20</span></div>
+    <div class="connects-track"><div class="connects-fill" class="w-90"></div></div>
+    <a href="#" class="connects-more">+ Get More Bids</a>
+  </div>
+  <nav class="sidebar-nav">
+    <a href="../worker/worker-overview.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Overview</a>
+    <a href="../worker/workerfind_jobs.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Find Jobs</a>
+    <a href="../worker/worker-bids.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>My Bids</a>
+    <a href="../worker/worker_working.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8l-2 4h12z"/></svg>Working On</a>
+    <a href="../worker/worker-history.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>History</a>
+    <a href="../worker/worker-portfolio.php" class="active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>Portfolio</a>
+    <a href="../worker/worker-messages.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Messages</a>
+    <a href="../worker/worker-payments.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>Payments</a>
+    <a href="../worker/worker-disputes.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Disputes</a>
+    <a href="../worker/worker-settings.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Settings</a>
+  </nav>
+</aside>
+
+<main class="app-main">
+  <header class="app-header">
+    <div class="app-header-title">
+      <h2>Professional Portfolio</h2>
+      <p>Showcase your best work to win bigger contracts.</p>
+    </div>
+    <div class="app-header-actions">
+      <button class="btn btn-primary btn-sm">+ Add New Project</button>
+    </div>
+  </header>
+
+  <div class="app-content-wide">
+    <!-- Portfolio Grid -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:36px">
+      <!-- Portfolio items -->
+      <div class="card" class="p-0-overflow-hidden">
+        <div style="height:160px;background:linear-gradient(135deg,#1a2a1a 0%,#2a4a3a 100%);display:flex;align-items:center;justify-content:center;font-size:2rem">🔌</div>
+        <div class="p-14-16">
+          <div class="text-lg-700">Luxury Home Rewiring</div>
+          <div class="label-mint-sm">Industrial Electrical</div>
+        </div>
+      </div>
+      <div class="card" class="p-0-overflow-hidden">
+        <div style="height:160px;background:linear-gradient(135deg,#111 0%,#1a2a3a 100%);display:flex;align-items:center;justify-content:center;font-size:2rem">☀️</div>
+        <div class="p-14-16">
+          <div class="text-lg-700">Solar Panel System</div>
+          <div class="label-mint-sm">Industrial Electrical</div>
+        </div>
+      </div>
+      <div class="card" class="p-0-overflow-hidden">
+        <div style="height:160px;background:linear-gradient(135deg,#1a1a2a 0%,#2a2a4a 100%);display:flex;align-items:center;justify-content:center;font-size:2rem">🔬</div>
+        <div class="p-14-16">
+          <div class="text-lg-700">Industrial Control Panel</div>
+          <div class="label-mint-sm">Industrial Electrical</div>
+        </div>
+      </div>
+      <!-- Upload new -->
+      <div class="card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:200px;cursor:pointer;border-style:dashed" onclick="alert('Upload coming soon')">
+        <div style="width:44px;height:44px;background:var(--off-white);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:10px;font-size:1.4rem">+</div>
+        <div style="font-size:.85rem;color:var(--muted)">Upload New Item</div>
+      </div>
+    </div>
+
+    <!-- Job History -->
+    <div class="card-header" class="mb-16">
+      <div>
+        <h3>Job History</h3>
+        <p class="muted" style="font-size:.82rem">Your track record of excellence.</p>
+      </div>
+    </div>
+
+    <div class="card" class="mb-14">
+      <div class="d-flex items-center gap-14">
+        <div style="width:40px;height:40px;background:var(--mint-tint);border-radius:50%;display:flex;align-items:center;justify-content:center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--mint-dim)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="flex-1">
+          <div class="text-lg-700">Fence Painting</div>
+          <div class="text-sm-muted-2">Completed for Michelle Barker · Oct 15, 2024</div>
+        </div>
+        <div class="text-right" class="mr-20">
+          <div class="label-muted">Earnings</div>
+          <div class="text-800">JMD 15,000</div>
+        </div>
+        <div class="text-right" class="mr-16">
+          <div class="label-muted">Rating</div>
+          <div style="color:var(--amber);font-size:.9rem">★★★★★</div>
+        </div>
+        <button class="btn btn-ghost btn-sm">Review</button>
+      </div>
+    </div>
+    <div class="card" class="mb-14">
+      <div class="d-flex items-center gap-14">
+        <div style="width:40px;height:40px;background:var(--mint-tint);border-radius:50%;display:flex;align-items:center;justify-content:center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--mint-dim)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="flex-1">
+          <div class="text-lg-700">AC Filter Update</div>
+          <div class="text-sm-muted-2">Completed for David Lewin · Oct 10, 2024</div>
+        </div>
+        <div class="text-right" class="mr-20">
+          <div class="label-muted">Earnings</div>
+          <div class="text-800">JMD 8,000</div>
+        </div>
+        <div class="text-right" class="mr-16">
+          <div class="label-muted">Rating</div>
+          <div style="color:var(--amber);font-size:.9rem">★★★★<span style="color:var(--border)">★</span></div>
+        </div>
+        <button class="btn btn-ghost btn-sm">Review</button>
+      </div>
+    </div>
+  </div>
+</main>
+</div>
+</body>
+</html>
+
+
+
+
+

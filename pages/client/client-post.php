@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JointU – Post a Job</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="app">
+<!-- CLIENT SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-logo"><a href="../../index.php" class="logo">Joint<span>U</span></a></div>
+  <nav class="sidebar-nav">
+    <a href="../client/client-dashboard.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Overview</a>
+    <a href="client-post.php" class="active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>Post a Job</a>
+    <a href="../client/client-active-jobs.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8l-2 4h12z"/></svg>Active Jobs</a>
+    <a href="client-completed-jobs.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Completed Jobs</a>
+    <a href="client-payments.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>Payments</a>
+    <a href="client-messages.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Messages</a>
+    <a href="client-disputes.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Disputes</a>
+    <a href="../client/client-settings.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Settings</a>
+  </nav>
+  <div class="sidebar-upgrade">
+    <div style="font-size:.9rem;color:rgba(255,255,255,.5);margin-bottom:2px">⚙</div>
+    <strong>Upgrade Plan</strong>
+    <p>Get priority visibility and top workers faster.</p>
+    <a href="../client/client-settings.php" class="btn btn-mint btn-sm w-full">Go Premium</a>
+  </div>
+</aside>
+
+<main class="app-main">
+  <header class="app-header">
+    <div class="app-header-title">
+      <h2>Post a New Job</h2>
+      <p>Provide clear details to get the best bids from professionals.</p>
+    </div>
+  </header>
+
+  <div class="app-content">
+    <div class="card">
+      <div class="form-group">
+        <label class="form-label">Job Title</label>
+        <input class="form-input" placeholder="e.g. Need help fixing my kitchen sink.">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Category</label>
+          <select class="form-input form-select" id="jobCategory" onchange="updateSkills(this.value)">
+            <option value="">Select Category</option>
+            <option value="trades">Trades</option>
+            <option value="creative">Creative Services</option>
+            <option value="digital">Digital Services</option>
+            <option value="domestic">Domestic Services</option>
+            <option value="business">Business Services</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Parish <span style="color:var(--muted);font-weight:400">(optional)</span></label>
+          <select class="form-input form-select">
+            <option value="">Any Parish</option>
+            <option>Kingston</option>
+            <option>St. Andrew</option>
+            <option>St. James</option>
+            <option>Manchester</option>
+            <option>St. Ann</option>
+            <option>Clarendon</option>
+            <option>Westmoreland</option>
+            <option>St. Catherine</option>
+            <option>Hanover</option>
+            <option>St. Elizabeth</option>
+            <option>Trelawny</option>
+            <option>Portland</option>
+            <option>St. Mary</option>
+            <option>St. Thomas</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group" id="skillsGroup" style="display:none">
+        <label class="form-label">Required Skills <span style="color:var(--muted);font-weight:400">(select all that apply)</span></label>
+        <div id="skillsChips" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px"></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" style="display:flex;justify-content:space-between">
+          Description
+          <span style="color:var(--mint);cursor:pointer;font-size:.75rem">🎤 Voice Description</span>
+        </label>
+        <textarea class="form-input form-textarea" placeholder="Describe what needs to be done..."></textarea>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Estimated Budget</label>
+          <input class="form-input" placeholder="JMD 0.00" type="number" min="0">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Deadline</label>
+          <input class="form-input" type="date">
+        </div>
+      </div>
+
+      <!-- Upload area -->
+      <div class="form-group">
+        <label class="form-label">Attachments (Photos/Videos)</label>
+        <div style="border:2px dashed var(--border);border-radius:var(--r);padding:32px;text-align:center;cursor:pointer;transition:border-color var(--t)" onmouseover="this.style.borderColor='var(--mint)'" onmouseout="this.style.borderColor='var(--border)'">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--light)" stroke-width="1.5" style="margin:0 auto 10px"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          <div style="font-weight:600;font-size:.88rem;margin-bottom:4px">Drag &amp; Drop files here</div>
+          <div class="text-sm-muted-2">Maximum 5 files, 10MB each.</div>
+        </div>
+      </div>
+
+      <!-- Safety tip -->
+      <div style="background:var(--ink);border-radius:var(--r);padding:14px 18px;display:flex;align-items:center;gap:12px;margin-bottom:20px">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div>
+          <strong style="color:var(--white);font-size:.85rem">Safety Tip</strong>
+          <p style="color:rgba(255,255,255,.5);font-size:.78rem;margin-top:2px">Communication outside our platform is restricted until you agree on a price for your safety.</p>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-lg w-full">Post Job Now →</button>
+    </div>
+  </div>
+</main>
+</div>
+<script>
+const SKILLS_BY_CATEGORY = {
+  trades:   ['Plumbing','Electrical Wiring','Carpentry','Tiling','Painting','Welding','AC Repair'],
+  creative: ['Graphic Design','Photography','Video Editing'],
+  digital:  ['Web Development','Mobile App Development','Social Media Management'],
+  domestic: ['Cleaning','Landscaping','Childcare'],
+  business: ['Data Entry','Accounting','Event Planning']
+};
+function updateSkills(cat) {
+  const group = document.getElementById('skillsGroup');
+  const chips = document.getElementById('skillsChips');
+  chips.innerHTML = '';
+  if (!cat || !SKILLS_BY_CATEGORY[cat]) { group.style.display = 'none'; return; }
+  SKILLS_BY_CATEGORY[cat].forEach(skill => {
+    const lbl = document.createElement('label');
+    lbl.style.cssText = 'display:flex;align-items:center;gap:5px;padding:5px 10px;border:1.5px solid var(--border);border-radius:100px;cursor:pointer;font-size:.8rem;font-weight:500;transition:border-color .15s,background .15s';
+    const cb = document.createElement('input');
+    cb.type = 'checkbox'; cb.name = 'job_skills'; cb.value = skill;
+    cb.style.accentColor = 'var(--mint)';
+    cb.addEventListener('change', () => {
+      lbl.style.borderColor = cb.checked ? 'var(--mint)' : 'var(--border)';
+      lbl.style.background  = cb.checked ? 'var(--mint-tint,#e6faf4)' : '';
+    });
+    lbl.appendChild(cb);
+    lbl.appendChild(document.createTextNode(skill));
+    chips.appendChild(lbl);
+  });
+  group.style.display = '';
+}
+</script>
+</body>
+</html>
+
+
+
+
+

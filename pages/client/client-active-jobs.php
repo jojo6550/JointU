@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JointU – Active Jobs</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="sidebar-logo"><a href="../../index.php" class="logo">Joint<span>U</span></a></div>
+  <nav class="sidebar-nav">
+    <a href="../client/client-dashboard.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Overview</a>
+    <a href="client-post.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>Post a Job</a>
+    <a href="../client/client-active-jobs.php" class="active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8l-2 4h12z"/></svg>Active Jobs</a>
+    <a href="client-completed-jobs.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Completed Jobs</a>
+    <a href="client-payments.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>Payments</a>
+    <a href="client-messages.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Messages</a>
+    <a href="client-disputes.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Disputes</a>
+    <a href="../client/client-settings.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Settings</a>
+  </nav>
+  <div class="sidebar-upgrade">
+    <strong>Upgrade Plan</strong>
+    <p>Get priority visibility and top workers faster.</p>
+    <a href="../client/client-settings.php" class="btn btn-mint btn-sm w-full">Go Premium</a>
+  </div>
+</aside>
+
+<main class="app-main">
+  <header class="app-header">
+    <div class="app-header-title">
+      <h2>Manage My Jobs</h2>
+      <p>Track your active listings and past projects.</p>
+    </div>
+    <div class="app-header-actions">
+      <div class="tabs" style="margin-bottom:0">
+        <button class="tab active" onclick="toggleTab(this,'active')">Active</button>
+        <button class="tab" onclick="toggleTab(this,'completed')">Completed</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-content">
+    <!-- Active -->
+    <div id="tab-active">
+      <div class="card" class="mb-16">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px">
+          <div>
+            <div style="font-weight:700;font-size:1rem;margin-bottom:4px">Fix Leaking Garden Pipe</div>
+            <div class="text-sm-muted-2">📍 St. Andrew &nbsp;·&nbsp; 2 days ago</div>
+          </div>
+          <span class="badge badge-green">OPEN</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+          <div class="d-flex">
+            <div class="avatar" style="width:28px;height:28px;font-size:.7rem;margin-right:-6px">MW</div>
+            <div class="avatar" style="width:28px;height:28px;font-size:.7rem;margin-right:-6px">DJ</div>
+            <div class="avatar" style="width:28px;height:28px;font-size:.7rem;background:var(--mint-dim)">+6</div>
+          </div>
+          <span class="text-sm-muted-3">8 Bids Received</span>
+        </div>
+        <a href="../client/client-job-detail.php" class="btn btn-ghost btn-sm">View All Bids →</a>
+      </div>
+
+      <div class="card" class="mb-16">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px">
+          <div>
+            <div style="font-weight:700;font-size:1rem;margin-bottom:4px">Modern Living Room Logo</div>
+            <div class="text-sm-muted-2">📍 Kingston &nbsp;·&nbsp; 1 week ago</div>
+          </div>
+          <span class="badge badge-blue">IN-PROGRESS</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+          <div class="d-flex">
+            <div class="avatar" style="width:28px;height:28px;font-size:.7rem;margin-right:-6px">EP</div>
+            <div class="avatar" style="width:28px;height:28px;font-size:.7rem;background:var(--mint-dim)">+2</div>
+          </div>
+          <span class="text-sm-muted-3">3 Bids Received</span>
+        </div>
+        <a href="../client/client-job-detail.php" class="btn btn-ghost btn-sm">View All Bids →</a>
+      </div>
+    </div>
+
+    <!-- Completed -->
+    <div id="tab-completed" class="d-none">
+      <div class="card" class="mb-16">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px">
+          <div><div style="font-weight:700;font-size:1rem;margin-bottom:4px">Office AC Cleaning</div><div class="text-sm-muted-2">📍 Kingston &nbsp;·&nbsp; Sep 12, 2024</div></div>
+          <span class="badge badge-gray">COMPLETED</span>
+        </div>
+        <div class="text-sm-muted-3">Completed by Mikhail W. &nbsp;·&nbsp; JMD 6,500</div>
+      </div>
+    </div>
+  </div>
+</main>
+</div>
+<script>
+function toggleTab(btn, id){
+  document.querySelectorAll('.tabs .tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-active').style.display=id==='active'?'block':'none';
+  document.getElementById('tab-completed').style.display=id==='completed'?'block':'none';
+}
+</script>
+</body>
+</html>
+
+
+
+
+

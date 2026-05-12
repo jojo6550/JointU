@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── SMOOTH PAGE TRANSITIONS ─────────────── */
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
-    // Only transition same-page .html links, skip anchors/modals/external
+    // Only transition same-page .php links, skip anchors/modals/external
     if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto')) return;
-    if (!href.endsWith('.html')) return;
+    if (!href.endsWith('.php')) return;
 
     link.addEventListener('click', function(e) {
       e.preventDefault();

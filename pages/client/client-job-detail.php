@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JointU – Job Detail</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="sidebar-logo"><a href="../../index.php" class="logo">Joint<span>U</span></a></div>
+  <nav class="sidebar-nav">
+    <a href="../client/client-dashboard.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Overview</a>
+    <a href="client-post-job.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>Post a Job</a>
+    <a href="../client/client-active-jobs.php" class="active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8l-2 4h12z"/></svg>Active Jobs</a>
+    <a href="client-completed-jobs.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Completed Jobs</a>
+    <a href="client-payments.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>Payments</a>
+    <a href="client-messages.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Messages</a>
+    <a href="client-disputes.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Disputes</a>
+    <a href="../client/client-settings.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Settings</a>
+  </nav>
+  <div class="sidebar-upgrade">
+    <strong>Upgrade Plan</strong>
+    <p>Get priority visibility and top workers faster.</p>
+    <a href="../client/client-settings.php" class="btn btn-mint btn-sm w-full">Go Premium</a>
+  </div>
+</aside>
+
+<main class="app-main">
+  <div class="app-content">
+    <a href="../client/client-active-jobs.php" style="font-size:.82rem;color:var(--muted);display:flex;align-items:center;gap:6px;margin-bottom:18px">← Back to My Jobs</a>
+
+    <!-- Project Details -->
+    <div class="card" class="mb-24">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">
+        <div class="label-muted">Project Details</div>
+        <span class="badge badge-green">OPEN</span>
+      </div>
+      <h2 style="font-size:1.4rem;margin-bottom:10px">Fix Leaking Garden Pipe</h2>
+      <p style="font-size:.88rem;color:var(--muted);margin-bottom:18px;line-height:1.65">The outdoor pipe near the gazebo is leaking heavily. Need it fixed as soon as possible to avoid high water bills. Please provide a quote for labor only; I have some spare parts but may need you to purchase specific ones.</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+        <div><div class="label-muted-sm">Category</div><div class="text-sm-2-700">Plumbing</div></div>
+        <div><div class="label-muted-sm">Parish</div><div class="text-sm-2-700">St. Andrew</div></div>
+        <div><div class="label-muted-sm">Budget</div><div class="text-sm-2-700">JMD 5,000</div></div>
+        <div><div class="label-muted-sm">Posted</div><div class="text-sm-2-700">Nov 1, 2024</div></div>
+      </div>
+    </div>
+
+    <!-- Bids -->
+    <h3 class="mb-16">Received Bids (2)</h3>
+
+    <!-- Bid 1 -->
+    <div class="card" class="mb-16" id="bid1">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:10px">
+        <div class="d-flex items-center gap-12">
+          <div class="avatar">MW</div>
+          <div>
+            <div class="fw-700">Mikhail W. <span style="color:var(--amber);font-size:.85rem">★ 4.9</span></div>
+            <div class="text-sm-muted-2">124 jobs completed</div>
+          </div>
+        </div>
+        <div class="text-right">
+          <div style="font-weight:800;font-size:1.1rem">JMD 6,500</div>
+          <div class="text-sm-muted">Delivery in 2 days</div>
+        </div>
+      </div>
+      <div style="font-size:.88rem;color:var(--muted);font-style:italic;background:var(--off-white);padding:12px 16px;border-radius:var(--r);margin-bottom:14px">"Hi, I have all the tools needed for this plumbing repair. I can start tomorrow morning."</div>
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <button class="btn btn-primary" onclick="acceptBid(1)">✓ Accept Bid</button>
+        <button class="btn btn-ghost" onclick="toggleCounter(1)">🔄 Counter-Offer</button>
+        <button class="btn btn-danger btn-sm" onclick="document.getElementById('bid1').style.opacity='.4'">✕</button>
+      </div>
+      <!-- Counter offer (hidden) -->
+      <div id="counter1" style="display:none;margin-top:16px;border-top:1px solid var(--border);padding-top:16px">
+        <div style="font-size:.72rem;font-weight:700;color:var(--mint);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px">🔄 Negotiating with Mikhail W.</div>
+        <div class="form-row" class="mb-12">
+          <div class="form-group"><label class="form-label">Your New Offer (JMD)</label><input class="form-input" placeholder="Enter amount"></div>
+          <div class="form-group"><label class="form-label">Expected Delivery</label><input class="form-input" value="1 Day"></div>
+        </div>
+        <textarea class="form-input form-textarea" style="min-height:70px;margin-bottom:12px" placeholder="Add a short message to explain your offer..."></textarea>
+        <div style="display:flex;gap:10px;justify-content:flex-end">
+          <button class="btn btn-ghost btn-sm" onclick="toggleCounter(1)">Cancel</button>
+          <button class="btn btn-primary btn-sm">Send Offer</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bid 2 -->
+    <div class="card" class="mb-20" id="bid2">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:10px">
+        <div class="d-flex items-center gap-12">
+          <div class="avatar">DJ</div>
+          <div>
+            <div class="fw-700">Dante J. <span style="color:var(--amber);font-size:.85rem">★ 4.7</span></div>
+            <div class="text-sm-muted-2">88 jobs completed</div>
+          </div>
+        </div>
+        <div class="text-right">
+          <div style="font-weight:800;font-size:1.1rem">JMD 5,000</div>
+          <div class="text-sm-muted">Delivery in 1 day</div>
+        </div>
+      </div>
+      <div style="font-size:.88rem;color:var(--muted);font-style:italic;background:var(--off-white);padding:12px 16px;border-radius:var(--r);margin-bottom:14px">"Professional repair services. Licensed and insured."</div>
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <button class="btn btn-primary" onclick="acceptBid(2)">✓ Accept Bid</button>
+        <button class="btn btn-ghost" onclick="toggleCounter(2)">🔄 Counter-Offer</button>
+        <button class="btn btn-danger btn-sm" onclick="document.getElementById('bid2').style.opacity='.4'">✕</button>
+      </div>
+      <div id="counter2" style="display:none;margin-top:16px;border-top:1px solid var(--border);padding-top:16px">
+        <div style="font-size:.72rem;font-weight:700;color:var(--mint);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px">🔄 Negotiating with Dante J.</div>
+        <div class="form-row" class="mb-12">
+          <div class="form-group"><label class="form-label">Your New Offer (JMD)</label><input class="form-input" placeholder="Enter amount"></div>
+          <div class="form-group"><label class="form-label">Expected Delivery</label><input class="form-input" value="1 Day"></div>
+        </div>
+        <textarea class="form-input form-textarea" style="min-height:70px;margin-bottom:12px" placeholder="Add a short message to explain your offer..."></textarea>
+        <div style="display:flex;gap:10px;justify-content:flex-end">
+          <button class="btn btn-ghost btn-sm" onclick="toggleCounter(2)">Cancel</button>
+          <button class="btn btn-primary btn-sm">Send Offer</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Safety warning -->
+    <div class="alert alert-warn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span><strong>Warning:</strong> Never share your personal phone or email before accepting a bid. JointU cannot protect your payments or disputes if communication moves outside this platform prematurely.</span>
+    </div>
+  </div>
+</main>
+</div>
+<script>
+function toggleCounter(n){
+  const el=document.getElementById('counter'+n);
+  el.style.display=el.style.display==='none'?'block':'none';
+}
+function acceptBid(n){
+  alert('Bid accepted! You can now message the worker.');
+}
+</script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Admin Control Center — JointU</title>
+<link rel="stylesheet" href="../../css/style.css">
+<style>
+.admin-stat{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px 24px;display:flex;flex-direction:column;gap:6px}
+.admin-stat-change{font-size:.75rem;font-weight:600}
+.admin-stat-change.up{color:var(--mint-dim)}
+.admin-stat-change.down{color:var(--red)}
+.admin-stat-change.stable{color:var(--blue)}
+.admin-stat-value{font-size:1.8rem;font-weight:700;font-family:'Fraunces',serif}
+.admin-stat-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.stats-grid-admin{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+.recent-reg-item{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)}
+.recent-reg-item:last-child{border-bottom:none}
+.reg-avatar{width:36px;height:36px;border-radius:50%;background:var(--ink);flex-shrink:0}
+.reg-name{font-weight:600;font-size:.9rem}
+.reg-role{font-size:.73rem;color:var(--muted)}
+.reg-time{font-size:.73rem;color:var(--light);margin-left:auto}
+.sys-health{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px 24px}
+.health-bar-track{height:8px;background:var(--surface);border-radius:100px;margin:10px 0}
+.health-bar-fill{height:100%;background:var(--mint);border-radius:100px;width:42%}
+.health-msg{font-size:.8rem;color:var(--muted);font-style:italic;padding:10px 14px;background:var(--off-white);border-radius:var(--r);border-left:3px solid var(--mint)}
+.dashboard-panels{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:900px){.stats-grid-admin{grid-template-columns:1fr 1fr}.dashboard-panels{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="app">
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo"><a href="../../index.php" class="logo">Joint<span>U</span></a></div>
+    <div class="sidebar-item">
+      <span class="badge badge-ink" class="d-flex btn-center">SYSTEM CONSOLE</span>
+    </div>
+    <nav class="sidebar-nav" class="p-8-0">
+      <a href="../admin/admin-dashboard.php" class="sidebar-link active">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Stats Overview
+      </a>
+      <a href="../admin/admin-users.php" class="sidebar-link">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Manage Users
+      </a>
+      <a href="../admin/admin-jobs.php" class="sidebar-link">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Jobs &amp; Proposals
+      </a>
+      <a href="../admin/admin-disputes.php" class="sidebar-link">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Dispute Center
+      </a>
+      <a href="../admin/admin-ads.php" class="sidebar-link">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Ad Inventory
+      </a>
+      <a href="../admin/admin-market-rules.php" class="sidebar-link">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>Market Rules
+      </a>
+      <a href="../admin/admin-settings.php" class="sidebar-link">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>System Settings
+      </a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="app-main">
+    <div class="app-content">
+      <div class="page-header" class="mb-24">
+        <h2 class="text-2xl-700">Admin Control Center</h2>
+        <p class="muted" class="text-base">Monitoring the JointU economy.</p>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid-admin">
+        <div class="admin-stat">
+          <span class="admin-stat-change up">▲ +18%</span>
+          <span class="admin-stat-value">1,280</span>
+          <span class="admin-stat-label">Total Users</span>
+        </div>
+        <div class="admin-stat">
+          <span class="admin-stat-change down">▼ -8%</span>
+          <span class="admin-stat-value">45</span>
+          <span class="admin-stat-label">Open Jobs</span>
+        </div>
+        <div class="admin-stat">
+          <span class="admin-stat-change up">▲ +20%</span>
+          <span class="admin-stat-value">$450k</span>
+          <span class="admin-stat-label">Platform Revenue</span>
+        </div>
+        <div class="admin-stat">
+          <span class="admin-stat-change stable">● Stable</span>
+          <span class="admin-stat-value">3</span>
+          <span class="admin-stat-label">Active Disputes</span>
+        </div>
+      </div>
+
+      <div class="dashboard-panels">
+        <!-- Recent Registrations -->
+        <div class="card">
+          <h3 class="mb-4">Recent Registrations</h3>
+          <div class="recent-reg-item">
+            <div class="reg-avatar" style="background:linear-gradient(135deg,#111,#00c896)"></div>
+            <div><div class="reg-name">Ricardo P.</div><div class="reg-role" style="color:var(--mint-dim);font-weight:600">WORKER</div></div>
+            <span class="reg-time">5 mins ago</span>
+          </div>
+          <div class="recent-reg-item">
+            <div class="reg-avatar" style="background:linear-gradient(135deg,#2a2a2a,#3b82f6)"></div>
+            <div><div class="reg-name">Keneisha W.</div><div class="reg-role">CLIENT</div></div>
+            <span class="reg-time">12 mins ago</span>
+          </div>
+          <div class="recent-reg-item">
+            <div class="reg-avatar" style="background:linear-gradient(135deg,#1c1c1c,#666)"></div>
+            <div><div class="reg-name">Global Plumbing Ltd.</div><div class="reg-role">BUSINESS</div></div>
+            <span class="reg-time">1 hour ago</span>
+          </div>
+        </div>
+
+        <!-- System Health -->
+        <div class="sys-health">
+          <h3 class="mb-4">System Health</h3>
+          <div style="display:flex;justify-content:space-between;margin-top:14px;margin-bottom:4px">
+            <span style="font-size:.8rem;font-weight:600">DATABASE LOAD</span>
+            <span class="text-sm-2-muted-700">42%</span>
+          </div>
+          <div class="health-bar-track"><div class="health-bar-fill"></div></div>
+          <div class="health-msg" class="mt-12">
+            "Automatic commission tracking and anti-bypass filters are running efficiently. No anomalies detected in the last 24 hours."
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script>
+  const sidebar=document.getElementById('sidebar');
+  document.querySelectorAll('.sidebar-link').forEach(l=>{
+    l.addEventListener('click',e=>{if(window.innerWidth<768)sidebar.classList.remove('open')});
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
+
